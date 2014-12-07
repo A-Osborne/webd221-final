@@ -1,0 +1,607 @@
+@import "variables.less";
+@import "mixins.less";
+
+// GLOBAL STYLES
+//----------------------------------------------------------
+
+// Fixes Box Model sizing issues
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+//Use this to force clear floated child elements
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+	margin: 0; // resets default space
+	padding: 0;
+	background: @bodyColor;
+	font-family: 'Oswald', sans-serif;
+}
+
+// remove default list styles
+
+
+ul { 
+	margin: 0;
+	padding: 0;
+
+	li {
+		list-style-type: none;
+	  a {
+	  	text-decoration: none;
+		}
+	}
+
+}
+
+.container {
+	width: @total-width;
+//	max-width: @gridsystem-width;
+	margin: 0 auto;
+	overflow: hidden; // self-clear floated child elements
+}
+
+
+
+//   SHARED STYLES
+//----------------------------------------------------------
+
+nav {
+	float: right;
+
+	li {
+		display: inline-block;
+		text-transform: uppercase;
+	}
+}
+
+.colourChange {
+  color: red;
+}
+
+.underline {
+  border-bottom: 2px solid red;
+}
+
+header, footer {
+	width: 100%;
+}
+.svc-col {
+  .column(3);
+  margin-top: 30px;
+  text-align: center;
+}
+
+
+//   HEADER
+//----------------------------------------------------------
+
+header {
+  height: 100px;
+  #mainNav {
+	background-color: white;
+	padding: 2% 2% 0 2%;
+  }
+
+  h1.logo {
+	float:left;
+	background-color: transparent;
+  }
+
+  nav{
+	li {
+	  font-size: 15px;
+	  padding: 30px 20px 10px 20px;
+	  a {
+		color: black;
+		display: block;
+	  }
+	  a:hover {
+		border-bottom: 2px solid red;
+	  }
+	}
+  }
+
+}
+
+//     INDEX
+//----------------------------------------------------------
+
+.indexContainer {
+  background: url(../img/heroImg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  text-align: center;
+  color: white;
+  .heroImgText {
+	margin: 30px 20px;
+	padding-top: 10px;
+
+	h1 {
+	  margin-top: 100px;
+	  background-color: rgba(0,0,0,0.3);
+	}
+	h3 {
+	  background-color: rgba(0,0,0,0.3);
+	  margin-bottom: 100px;
+	}
+	.fa-chevron-left {
+	  position: absolute;
+	  top: 245px;
+	  left: 0;
+	}
+	.fa-chevron-right {
+	  position: absolute;
+	  top: 245px;
+	  right: 0;
+	}
+  }
+  .bottomHeroImgText {
+	background-color: red;
+  }
+  p {
+	font-size: 20px;
+	text-align: center;
+	color: white;
+	padding: 30px 0;
+  }
+
+  .line-UC {
+	text-transform: uppercase;
+	text-decoration: underline;
+  }
+}
+
+.svc-col {
+  background-color: lightgray;
+}
+
+.index,
+.recentProjects {
+  text-align: center;
+  background-color: white;
+  margin-top: 30px;
+  h1 {
+	.column(12);
+	padding-bottom: 30px
+  }
+
+  i {
+	color: red
+  }
+}
+.index {
+  .svc-col {
+	background-color: white;
+  }
+}
+.recentProjects {
+  margin-bottom: 50px;
+  h3 {
+	text-align: right;
+	color: red;
+	display: block;
+	padding: 0 10px 10px 0;
+	border-bottom: 1px solid gray;
+  }
+  .svc-col {
+	margin-top: 30px;
+	img {
+	  width: 100%;
+	}
+	p {
+	  text-align: right;
+	  padding-right: 10px;
+	}
+  }
+}
+
+//      SERVICES
+//----------------------------------------------------------
+
+.services {
+  .heroImgText {
+	background: url(../img/heroImg2.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+	color: white;
+	text-align: center;
+	h1 {
+	  font-size: 40px;
+	  padding: 80px 0 10px 0;
+	}
+	p:last-child {
+	  padding-bottom: 80px;
+	}
+  }
+  .topSection {
+	h1,
+	p {
+	  text-align: center;
+	  padding-left: 20px;
+	  padding-right: 20px;
+	}
+	.svc-col {
+	   background-color: white;
+	   border: 1px solid lightgray;
+	   p {
+		 padding-left: 10px;
+		 padding-right: 10px;
+		 &:last-child {
+		   color: red;
+		 }
+	   }
+	 }
+	.fa-paint-brush {
+	  padding-top: 10px;
+	  color: #ef6190;
+	}
+	.fa-html5 {
+	  padding-top: 10px;
+	  color: #f16529;
+	}
+	.fa-css3 {
+	  padding-top: 10px;
+	  color: #119dd8;
+	}
+	.fa-wordpress {
+	  padding-top: 10px;
+	}
+	.circle {
+	  margin-top: -25px;
+	  width: 50px;
+	  height: 50px;
+	  border: 1px solid lightgray;
+	  background: white;
+	  -moz-border-radius: 25px;
+	  -webkit-border-radius: 25px;
+	  border-radius: 25px;
+	}
+  }
+  .midSection {
+	margin: 25px 0;
+	background-color: rgba(0,0,0,0.1);
+	#leftSection {
+	  img {
+		.column(6);
+	  }
+	}
+	#rightSection {
+	  .column(6);
+	  h1,
+	  p {
+		text-align: left;
+	  }
+	  ul {
+		margin-top: 15px;
+		li {
+		  margin-top: 10px;
+		  .fa-check {
+			color: #1eca1e;
+		  }
+		}
+	  }
+	}
+  }
+  .bottomSection {
+	text-align: center;
+	img {
+	  .column(3);
+	  padding: 0 75px 25px;
+
+	}
+  }
+
+}
+
+
+//     PORTFOLIO
+//----------------------------------------------------------
+
+.portfolio {
+  .heroImgText {
+	background: url(../img/heroImg3.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+	color: white;
+	text-align: center;
+	h1 {
+	  font-size: 40px;
+	  padding: 80px 0 10px 0;
+	}
+	p:last-child {
+	  padding-bottom: 80px;
+	}
+  }
+  section {
+	h1,
+	p {
+	  text-align: center;
+	  padding: 0 20px 20px;
+	}
+	ul {
+	  margin: 10px;
+	  li {
+		display: inline;
+		margin: 15px;
+		padding: 5px;
+		&:hover {
+		  background-color: lightgray;
+		  border: 1px solid black;
+		  -moz-border-radius: 3px;
+		  -webkit-border-radius: 3px;
+		  border-radius: 3px;
+		}
+	  }
+	}
+	img {
+	  .column(3);
+	  padding: 15px 0;
+	  &:hover {
+		opacity: 0.5;
+	  }
+	  &:last-child {
+		padding-bottom: 50px;
+	  }
+	}
+  }
+}
+
+
+//     FOOTER
+//----------------------------------------------------------
+
+footer{
+  color: white;
+  background-color: red;
+  font-size: 14px;
+  text-align: center;
+}
+
+//----------------------------
+// MEDIA QUERIES
+//----------------------------
+// Landscape tablet and small desktops
+@media (max-width: 940px) {
+	.services {
+	  #rightSection {
+		font-size: 12px;
+	  }
+	  .bottomSection {
+		 img {
+		   .column(6);
+		 }
+	   }
+	}
+
+}
+
+// Landscape phone to portrait tablet
+@media (max-width: 767px) {
+
+  .svc-col {
+	.column(6);
+  }
+
+  header {
+	margin-top: 0;
+	.logo {
+	  text-align: center;
+	  .column(12);
+	}
+	nav {
+	  float: none;
+	  text-align: center;
+	  .column(12);
+	  ul li {
+		padding-top: 20px;
+	  }
+	}
+
+  }
+
+  .indexContainer {
+	.bottomHeroImgText {
+	  p {
+		padding: 20px 0;
+	  }
+	}
+  }
+
+  .services {
+	.svc-col {
+	  margin-top: 25px;
+	  margin-bottom: 25px;
+	}
+	.midSection {
+	  #leftSection {
+		img {
+		  text-align: center;
+		  .column(12);
+		}
+	  }
+	  #rightSection {
+		.column(12);
+		ul {
+		  margin-bottom: 25px
+		}
+	  }
+	}
+  }
+
+  .portfolio {
+	.heroImgText {
+	  h1 {
+		padding-top: 30px;
+	  }
+	  p:last-child {
+		padding-bottom: 30px;
+	  }
+	}
+	section {
+	  img {
+		.column(6);
+	  }
+	}
+  }
+}
+
+// Found that it was needed
+@media (max-width: 550px) {
+
+  header {
+	height: 50px;
+  }
+  .indexContainer {
+	margin-top: -75px;
+	.heroImgText {
+	  margin-top: 150px;
+	  h1 {
+		margin-top: 100px;
+	  }
+	  h3 {
+		margin-bottom: 200px;
+	  }
+	  .fa-chevron-left,
+	  .fa-chevron-right {
+		display: none
+	  }
+	}
+	.bottomHeroImgText {
+	  margin-top: -150px;
+	}
+  }
+  .services {
+	.heroImgText {
+	  margin-top: 75px;
+	}
+  }
+  .portfolio {
+	.heroImgText {
+	  margin-top: 130px;
+	  h1 {
+		font-size: 30px;
+		padding: 30px 0 0 0;
+	  }
+	  p {
+		padding-left: 10px;
+		padding-right: 10px;
+		font-size: 14px;
+	  }
+
+	}
+  }
+
+}
+
+// Portrait phones and down
+@media (max-width: 480px) {
+
+  .svc-col {
+	.column(12);
+  }
+
+  header {
+	height: 10px;
+  }
+
+  .indexContainer {
+	margin-top: 100px;
+	.heroImgText {
+	  margin: 50px 0 -100px 0;
+	  padding-top: 90px;
+	  h1 {
+		margin-top: 0;
+		font-size: 20px;
+	  }
+	  h3 {
+		padding: 0 20px;
+		margin-bottom: 125px;
+	  }
+	}
+
+	.fa-chevron-left {
+	  top: 50px;
+	}
+	.fa-chevron-right {
+	  top: 50px;
+	}
+	.bottomHeroImgText {
+	  margin-top: -50px;
+	}
+  }
+
+  .services {
+	.heroImgText {
+	  margin-top: 130px;
+	  h1 {
+		font-size: 30px;
+		padding: 30px 0 0 0;
+	  }
+	  p {
+		padding-left: 10px;
+		padding-right: 10px;
+		font-size: 14px;
+	  }
+	  p:last-child {
+		padding-bottom: 40px;
+	  }
+	}
+	#rightSection {
+	  padding-left: 20px;
+	  padding-right: 20px;
+	}
+	.bottomSection {
+	  img {
+		.column(12);
+	  }
+	}
+  }
+  .portfolio {
+	.heroImgText {
+	  margin-top: 100px;
+	  h1 {
+		font-size: 30px;
+		padding: 50px 0 0 0;
+	  }
+	  p {
+		padding-left: 10px;
+		padding-right: 10px;
+		font-size: 14px;
+		&:last-child {
+		  padding-bottom: 50px;
+		}
+	  }
+
+	}
+	section {
+	  ul {
+		li {
+		  padding: 30px
+		}
+	  }
+	  img {
+		.column(12);
+	  }
+	}
+  }
+}
+
+
+
+
+

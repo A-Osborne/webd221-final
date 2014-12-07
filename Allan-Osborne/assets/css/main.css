@@ -1,0 +1,520 @@
+@font-face {
+  font-family: main-font;
+  src: url("../fonts/Aaargh.ttf");
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  font-family: 'Oswald', sans-serif;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  list-style-type: none;
+}
+ul li a {
+  text-decoration: none;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+nav {
+  float: right;
+}
+nav li {
+  display: inline-block;
+  text-transform: uppercase;
+}
+.colourChange {
+  color: red;
+}
+.underline {
+  border-bottom: 2px solid red;
+}
+header,
+footer {
+  width: 100%;
+}
+.svc-col {
+  display: inline;
+  float: left;
+  width: 22.916666666666664%;
+  margin: 0 1.0416666666666665%;
+  margin-top: 30px;
+  text-align: center;
+}
+header {
+  height: 100px;
+}
+header #mainNav {
+  background-color: white;
+  padding: 2% 2% 0 2%;
+}
+header h1.logo {
+  float: left;
+  background-color: transparent;
+}
+header nav li {
+  font-size: 15px;
+  padding: 30px 20px 10px 20px;
+}
+header nav li a {
+  color: black;
+  display: block;
+}
+header nav li a:hover {
+  border-bottom: 2px solid red;
+}
+.indexContainer {
+  background: url(../img/heroImg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  text-align: center;
+  color: white;
+}
+.indexContainer .heroImgText {
+  margin: 30px 20px;
+  padding-top: 10px;
+}
+.indexContainer .heroImgText h1 {
+  margin-top: 100px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.indexContainer .heroImgText h3 {
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-bottom: 100px;
+}
+.indexContainer .heroImgText .fa-chevron-left {
+  position: absolute;
+  top: 245px;
+  left: 0;
+}
+.indexContainer .heroImgText .fa-chevron-right {
+  position: absolute;
+  top: 245px;
+  right: 0;
+}
+.indexContainer .bottomHeroImgText {
+  background-color: red;
+}
+.indexContainer p {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  padding: 30px 0;
+}
+.indexContainer .line-UC {
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+.svc-col {
+  background-color: lightgray;
+}
+.index,
+.recentProjects {
+  text-align: center;
+  background-color: white;
+  margin-top: 30px;
+}
+.index h1,
+.recentProjects h1 {
+  display: inline;
+  float: left;
+  width: 97.91666666666666%;
+  margin: 0 1.0416666666666665%;
+  padding-bottom: 30px;
+}
+.index i,
+.recentProjects i {
+  color: #ff0000;
+}
+.index .svc-col {
+  background-color: white;
+}
+.recentProjects {
+  margin-bottom: 50px;
+}
+.recentProjects h3 {
+  text-align: right;
+  color: red;
+  display: block;
+  padding: 0 10px 10px 0;
+  border-bottom: 1px solid gray;
+}
+.recentProjects .svc-col {
+  margin-top: 30px;
+}
+.recentProjects .svc-col img {
+  width: 100%;
+}
+.recentProjects .svc-col p {
+  text-align: right;
+  padding-right: 10px;
+}
+.services .heroImgText {
+  background: url(../img/heroImg2.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+.services .heroImgText h1 {
+  font-size: 40px;
+  padding: 80px 0 10px 0;
+}
+.services .heroImgText p:last-child {
+  padding-bottom: 80px;
+}
+.services .topSection h1,
+.services .topSection p {
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.services .topSection .svc-col {
+  background-color: white;
+  border: 1px solid lightgray;
+}
+.services .topSection .svc-col p {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.services .topSection .svc-col p:last-child {
+  color: red;
+}
+.services .topSection .fa-paint-brush {
+  padding-top: 10px;
+  color: #ef6190;
+}
+.services .topSection .fa-html5 {
+  padding-top: 10px;
+  color: #f16529;
+}
+.services .topSection .fa-css3 {
+  padding-top: 10px;
+  color: #119dd8;
+}
+.services .topSection .fa-wordpress {
+  padding-top: 10px;
+}
+.services .topSection .circle {
+  margin-top: -25px;
+  width: 50px;
+  height: 50px;
+  border: 1px solid lightgray;
+  background: white;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+}
+.services .midSection {
+  margin: 25px 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.services .midSection #leftSection img {
+  display: inline;
+  float: left;
+  width: 47.91666666666667%;
+  margin: 0 1.0416666666666665%;
+}
+.services .midSection #rightSection {
+  display: inline;
+  float: left;
+  width: 47.91666666666667%;
+  margin: 0 1.0416666666666665%;
+}
+.services .midSection #rightSection h1,
+.services .midSection #rightSection p {
+  text-align: left;
+}
+.services .midSection #rightSection ul {
+  margin-top: 15px;
+}
+.services .midSection #rightSection ul li {
+  margin-top: 10px;
+}
+.services .midSection #rightSection ul li .fa-check {
+  color: #1eca1e;
+}
+.services .bottomSection {
+  text-align: center;
+}
+.services .bottomSection img {
+  display: inline;
+  float: left;
+  width: 22.916666666666664%;
+  margin: 0 1.0416666666666665%;
+  padding: 0 75px 25px;
+}
+.portfolio .heroImgText {
+  background: url(../img/heroImg3.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+.portfolio .heroImgText h1 {
+  font-size: 40px;
+  padding: 80px 0 10px 0;
+}
+.portfolio .heroImgText p:last-child {
+  padding-bottom: 80px;
+}
+.portfolio section h1,
+.portfolio section p {
+  text-align: center;
+  padding: 0 20px 20px;
+}
+.portfolio section ul {
+  margin: 10px;
+}
+.portfolio section ul li {
+  display: inline;
+  margin: 15px;
+  padding: 5px;
+}
+.portfolio section ul li:hover {
+  background-color: lightgray;
+  border: 1px solid black;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+.portfolio section img {
+  display: inline;
+  float: left;
+  width: 22.916666666666664%;
+  margin: 0 1.0416666666666665%;
+  padding: 15px 0;
+}
+.portfolio section img:hover {
+  opacity: 0.5;
+}
+.portfolio section img:last-child {
+  padding-bottom: 50px;
+}
+footer {
+  color: white;
+  background-color: red;
+  font-size: 14px;
+  text-align: center;
+}
+@media (max-width: 940px) {
+  .services #rightSection {
+    font-size: 12px;
+  }
+  .services .bottomSection img {
+    display: inline;
+    float: left;
+    width: 47.91666666666667%;
+    margin: 0 1.0416666666666665%;
+  }
+}
+@media (max-width: 767px) {
+  .svc-col {
+    display: inline;
+    float: left;
+    width: 47.91666666666667%;
+    margin: 0 1.0416666666666665%;
+  }
+  header {
+    margin-top: 0;
+  }
+  header .logo {
+    text-align: center;
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
+  header nav {
+    float: none;
+    text-align: center;
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
+  header nav ul li {
+    padding-top: 20px;
+  }
+  .indexContainer .bottomHeroImgText p {
+    padding: 20px 0;
+  }
+  .services .svc-col {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .services .midSection #leftSection img {
+    text-align: center;
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
+  .services .midSection #rightSection {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
+  .services .midSection #rightSection ul {
+    margin-bottom: 25px;
+  }
+  .portfolio .heroImgText h1 {
+    padding-top: 30px;
+  }
+  .portfolio .heroImgText p:last-child {
+    padding-bottom: 30px;
+  }
+  .portfolio section img {
+    display: inline;
+    float: left;
+    width: 47.91666666666667%;
+    margin: 0 1.0416666666666665%;
+  }
+}
+@media (max-width: 550px) {
+  header {
+    height: 50px;
+  }
+  .indexContainer {
+    margin-top: -75px;
+  }
+  .indexContainer .heroImgText {
+    margin-top: 150px;
+  }
+  .indexContainer .heroImgText h1 {
+    margin-top: 100px;
+  }
+  .indexContainer .heroImgText h3 {
+    margin-bottom: 200px;
+  }
+  .indexContainer .heroImgText .fa-chevron-left,
+  .indexContainer .heroImgText .fa-chevron-right {
+    display: none;
+  }
+  .indexContainer .bottomHeroImgText {
+    margin-top: -150px;
+  }
+  .services .heroImgText {
+    margin-top: 75px;
+  }
+  .portfolio .heroImgText {
+    margin-top: 130px;
+  }
+  .portfolio .heroImgText h1 {
+    font-size: 30px;
+    padding: 30px 0 0 0;
+  }
+  .portfolio .heroImgText p {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .svc-col {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
+  header {
+    height: 10px;
+  }
+  .indexContainer {
+    margin-top: 100px;
+  }
+  .indexContainer .heroImgText {
+    margin: 50px 0 -100px 0;
+    padding-top: 90px;
+  }
+  .indexContainer .heroImgText h1 {
+    margin-top: 0;
+    font-size: 20px;
+  }
+  .indexContainer .heroImgText h3 {
+    padding: 0 20px;
+    margin-bottom: 125px;
+  }
+  .indexContainer .fa-chevron-left {
+    top: 50px;
+  }
+  .indexContainer .fa-chevron-right {
+    top: 50px;
+  }
+  .indexContainer .bottomHeroImgText {
+    margin-top: -50px;
+  }
+  .services .heroImgText {
+    margin-top: 130px;
+  }
+  .services .heroImgText h1 {
+    font-size: 30px;
+    padding: 30px 0 0 0;
+  }
+  .services .heroImgText p {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+  }
+  .services .heroImgText p:last-child {
+    padding-bottom: 40px;
+  }
+  .services #rightSection {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .services .bottomSection img {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
+  .portfolio .heroImgText {
+    margin-top: 100px;
+  }
+  .portfolio .heroImgText h1 {
+    font-size: 30px;
+    padding: 50px 0 0 0;
+  }
+  .portfolio .heroImgText p {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+  }
+  .portfolio .heroImgText p:last-child {
+    padding-bottom: 50px;
+  }
+  .portfolio section ul li {
+    padding: 30px;
+  }
+  .portfolio section img {
+    display: inline;
+    float: left;
+    width: 97.91666666666666%;
+    margin: 0 1.0416666666666665%;
+  }
+}
